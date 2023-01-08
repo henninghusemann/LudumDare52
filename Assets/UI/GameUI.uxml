@@ -1,0 +1,42 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/styleSheet.uss?fileID=7433441132597879392&amp;guid=1c97d1591df38de4382b00374457d2f5&amp;type=3#styleSheet" />
+    <ui:VisualElement style="width: auto; flex-grow: 1; justify-content: flex-end;">
+        <ui:VisualElement style="justify-content: space-between; flex-grow: 1;">
+            <ui:VisualElement name="status-bar" style="align-items: center; flex-direction: row; justify-content: space-between; flex-grow: 0;">
+                <ui:VisualElement style="flex-direction: row; background-color: rgba(0, 0, 0, 0.63); padding-left: 1%; padding-right: 1%; flex-grow: 0; margin-left: 1%; margin-right: 1%; justify-content: space-between;">
+                    <ui:Label text="Solar Harvesters" display-tooltip-when-elided="true" class="text-style" style="font-size: 25px;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="solar-harvester-count-label" class="text-style" style="font-size: 25px; color: rgb(255, 255, 255); flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; background-color: rgba(0, 0, 0, 0.63); padding-left: 1%; padding-right: 1%; flex-grow: 1; margin-left: 1%; justify-content: space-between;">
+                    <ui:Label text="Matter Condensers" display-tooltip-when-elided="true" class="text-style" style="font-size: 25px; color: rgb(255, 255, 255);" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="matter-condenser-count-label" class="text-style" style="font-size: 25px; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; background-color: rgba(0, 0, 0, 0.63); padding-left: 1%; padding-right: 1%; flex-grow: 1; margin-left: 1%; margin-right: 1%; justify-content: space-between;">
+                    <ui:Label text="Energy Harvest" display-tooltip-when-elided="true" class="text-style" style="font-size: 20px; color: rgb(255, 255, 255);" />
+                    <ui:Label text="0 J/s" display-tooltip-when-elided="true" name="energy-harvest-label" class="text-style" style="font-size: 25px; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; background-color: rgba(0, 0, 0, 0.63); padding-left: 1%; padding-right: 1%; flex-grow: 1; margin-left: 1%; margin-right: 1%; justify-content: space-between;">
+                    <ui:Label text="Conversion Rate" display-tooltip-when-elided="true" class="text-style" style="font-size: 25px; color: rgb(255, 255, 255);" />
+                    <ui:Label text="4" display-tooltip-when-elided="true" name="energy-conversion-label" class="text-style" style="font-size: 25px; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; background-color: rgba(0, 0, 0, 0.63); padding-left: 1%; padding-right: 1%; flex-grow: 1; margin-left: 1%; margin-right: 1%; justify-content: space-between;">
+                    <ui:Label text="Proto Matter" display-tooltip-when-elided="true" class="text-style" style="font-size: 25px; color: rgb(113, 219, 165);" />
+                    <ui:Label text="0  T" display-tooltip-when-elided="true" name="proto-matter-units-label" class="text-style" style="font-size: 25px; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: flex-start;">
+            <ui:VisualElement name="info-panel" style="background-color: rgb(0, 0, 0); width: 20%; align-items: center; justify-content: space-between; border-top-left-radius: 5%; border-bottom-left-radius: 5%; border-top-right-radius: 5%; border-bottom-right-radius: 5%; -unity-text-align: upper-left; flex-direction: column; display: flex; height: 606px;">
+                <ui:VisualElement name="info-panel-image" style="background-image: url(&apos;project://database/Assets/Textures/solarharvesterdetailimage.png?fileID=2800000&amp;guid=d818a18fdc4a3bc47b5ad6523b096f36&amp;type=3#solarharvesterdetailimage&apos;); width: 256px; height: 256px;" />
+                <ui:Label text="Solar Harvester" display-tooltip-when-elided="true" name="info-panel-title" class="text-style" style="white-space: normal; -unity-text-align: middle-left; flex-direction: column; -unity-font-style: bold; height: 22px;" />
+                <ui:Label text="&#10;Converts Solar Ratiation into eletrical Energy" display-tooltip-when-elided="true" name="info-panel-text" class="text-style" style="white-space: normal; -unity-text-align: upper-left; height: 120px; font-size: 20px;" />
+                <ui:Label text="Costs: 1000 T Proto Matter" display-tooltip-when-elided="true" name="info-panel-cost-text" class="text-style" style="white-space: normal; -unity-text-align: upper-center; color: rgb(113, 219, 165); width: 100%; height: 108px; font-size: 25px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="height: 15%; align-items: center; justify-content: center; flex-direction: row; background-color: rgba(0, 0, 0, 0.5); margin-left: 0; padding-left: 0; padding-right: 0; flex-grow: 0;">
+            <ui:Button text="Build Photon Harvester" display-tooltip-when-elided="true" name="harvester-button" class="build-button text-style" style="height: auto; width: auto; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; white-space: nowrap; -unity-text-align: middle-left; font-size: 25px;" />
+            <ui:Button text="Build Matter Condenser" display-tooltip-when-elided="true" name="matter-condenser-button" class="build-button text-style" style="-unity-text-align: middle-center; white-space: nowrap; font-size: 25px;" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="exit-button" class="build-button text-style" style="margin-left: 20%; height: 43px; background-color: rgb(152, 0, 7); font-size: 25px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
